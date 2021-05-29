@@ -18,17 +18,17 @@ namespace LeetCode
                 return 0;
             }
 
-            var digits = AddDigits(number);
+            var digits = GetDigits(number);
             if (digits.Count > 1)
             {
-                var sumOfDigits = GetSumOfIntegers(digits);
+                var sumOfDigits = AddDigits(digits);
                 return RecursivelyAddDigitsUntilOneDigitNumber(sumOfDigits);
             }
             
             return digits[0];
         }
 
-        private static List<int> AddDigits(int number)
+        private static List<int> GetDigits(int number)
         {
             var digits = new List<int>();
             while (number > 0)
@@ -41,7 +41,7 @@ namespace LeetCode
             return digits;
         }
 
-        private static int GetSumOfIntegers(List<int> numbers)
+        private static int AddDigits(List<int> numbers)
         {
             var sum = 0;
             foreach (var number in numbers)
