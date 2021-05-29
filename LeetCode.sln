@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{CA122E1B-0A43-47ED-87A9-5D40E53BB301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy.AddDigits", "LeetCode\Easy.AddDigits.csproj", "{CA122E1B-0A43-47ED-87A9-5D40E53BB301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

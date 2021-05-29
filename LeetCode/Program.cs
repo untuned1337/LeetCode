@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -6,7 +7,49 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var result = RecursivelyAddDigitsUntilOneDigitNumber(68);
+            Console.WriteLine(result);
         }
+
+        public static int RecursivelyAddDigitsUntilOneDigitNumber(int number) 
+        {
+            if (number == 0)
+            {
+                return 0;
+            }
+
+            var digits = AddDigits(number);
+            if (digits.Count > 1)
+            {
+                var sumOfDigits = GetSumOfIntegers(digits);
+                return RecursivelyAddDigitsUntilOneDigitNumber(sumOfDigits);
+            }
+            
+            return digits[0];
+        }
+
+        private static List<int> AddDigits(int number)
+        {
+            var digits = new List<int>();
+            while (number > 0)
+            {
+                var nextDigit = number % 10;
+                number /= 10;
+                digits.Add(nextDigit);
+            }
+
+            return digits;
+        }
+
+        private static int GetSumOfIntegers(List<int> numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+
+            return sum;
+        } 
     }
 }
